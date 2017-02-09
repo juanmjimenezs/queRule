@@ -40,7 +40,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iqJ-7S-d9H">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iqJ-7S-d9H" customClass="GameCell" customModule="queRule" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -101,6 +101,11 @@
                                         </constraints>
                                         <size key="customSize" width="355" height="120"/>
                                         <connections>
+                                            <outlet property="imageView" destination="k22-ei-KSJ" id="aO3-RP-YGd"/>
+                                            <outlet property="lblBorrowed" destination="Gdw-yo-MQR" id="I0f-5k-R6A"/>
+                                            <outlet property="lblBorrowedDate" destination="b9O-0C-15a" id="Cst-XD-hT2"/>
+                                            <outlet property="lblBorrowedTo" destination="Yj1-ba-eO8" id="3rI-Ic-bb1"/>
+                                            <outlet property="lblTitle" destination="DK3-ND-751" id="7Jp-ap-oVC"/>
                                             <segue destination="d1H-st-qId" kind="show" identifier="editGameSegue" id="Gg9-jR-vUj"/>
                                         </connections>
                                     </collectionViewCell>
@@ -120,6 +125,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Mis Juegos" id="o0R-oG-kKZ"/>
                     <connections>
+                        <outlet property="collectionView" destination="5XG-0h-iOy" id="szV-Fj-f4P"/>
+                        <outlet property="filterControl" destination="P2F-Zh-jYz" id="Ksa-8y-ccF"/>
                         <segue destination="23s-lW-MtL" kind="presentation" identifier="addGameSegue" id="w6x-K0-TaP"/>
                     </connections>
                 </viewController>
@@ -172,7 +179,7 @@
                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNy-iM-zhK">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNy-iM-zhK">
                                 <rect key="frame" x="172" y="427" width="51" height="31"/>
                                 <color key="onTintColor" red="0.8784313725490196" green="0.21176470588235294" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
@@ -265,6 +272,7 @@
                             <constraint firstItem="ShO-0r-Pwh" firstAttribute="top" secondItem="ec6-Ey-eg6" secondAttribute="bottom" constant="10" id="TlL-Xa-3nS"/>
                             <constraint firstItem="t0w-px-0fU" firstAttribute="top" secondItem="9pF-jC-r2b" secondAttribute="bottom" constant="20" id="Y4P-gp-o5d"/>
                             <constraint firstItem="ShO-0r-Pwh" firstAttribute="leading" secondItem="Sc7-1N-ZUc" secondAttribute="leading" constant="27" id="YAN-U0-3PA"/>
+                            <constraint firstItem="QNy-iM-zhK" firstAttribute="leading" secondItem="ec6-Ey-eg6" secondAttribute="trailing" constant="8.5" id="ZHG-m4-Rjz"/>
                             <constraint firstItem="VQx-6K-hfL" firstAttribute="top" secondItem="xAT-zL-jtT" secondAttribute="bottom" constant="28" id="hc4-Nm-YsQ"/>
                             <constraint firstItem="ec6-Ey-eg6" firstAttribute="top" secondItem="VQx-6K-hfL" secondAttribute="bottom" constant="15" id="nTQ-Cj-WHe"/>
                             <constraint firstItem="QNy-iM-zhK" firstAttribute="top" secondItem="VQx-6K-hfL" secondAttribute="bottom" constant="15" id="opT-42-ui8"/>

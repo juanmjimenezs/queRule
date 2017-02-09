@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //Le pasamos el contexto al view controller donde cargaremos la lista de juegos
+        let navVC = self.window?.rootViewController as! UINavigationController
+        let gamesVC = navVC.topViewController as! GamesViewController
+        gamesVC.managedObjectContext = persistentContainer.viewContext
+        
         return true
     }
 
