@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA99BE931E4BF6E300D9B53A /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99BE921E4BF6E300D9B53A /* GamesViewController.swift */; };
+		FA99BE951E4BFA0300D9B53A /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99BE941E4BFA0300D9B53A /* AddGameViewController.swift */; };
+		FA99BE971E4BFB5300D9B53A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99BE961E4BFB5300D9B53A /* GameCell.swift */; };
 		FAACEF171E4AAA7E002202B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACEF161E4AAA7E002202B4 /* AppDelegate.swift */; };
-		FAACEF191E4AAA7E002202B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACEF181E4AAA7E002202B4 /* ViewController.swift */; };
 		FAACEF1C1E4AAA7E002202B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAACEF1A1E4AAA7E002202B4 /* Main.storyboard */; };
 		FAACEF1F1E4AAA7E002202B4 /* queRule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAACEF1D1E4AAA7E002202B4 /* queRule.xcdatamodeld */; };
 		FAACEF211E4AAA7E002202B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAACEF201E4AAA7E002202B4 /* Assets.xcassets */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA99BE921E4BF6E300D9B53A /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		FA99BE941E4BFA0300D9B53A /* AddGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
+		FA99BE961E4BFB5300D9B53A /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		FAACEF131E4AAA7E002202B4 /* queRule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = queRule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAACEF161E4AAA7E002202B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAACEF181E4AAA7E002202B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAACEF1B1E4AAA7E002202B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAACEF1E1E4AAA7E002202B4 /* queRule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = queRule.xcdatamodel; sourceTree = "<group>"; };
 		FAACEF201E4AAA7E002202B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				FAACEF161E4AAA7E002202B4 /* AppDelegate.swift */,
-				FAACEF181E4AAA7E002202B4 /* ViewController.swift */,
+				FA99BE921E4BF6E300D9B53A /* GamesViewController.swift */,
+				FA99BE941E4BFA0300D9B53A /* AddGameViewController.swift */,
 				FAACEF1A1E4AAA7E002202B4 /* Main.storyboard */,
+				FA99BE961E4BFB5300D9B53A /* GameCell.swift */,
 				FAACEF201E4AAA7E002202B4 /* Assets.xcassets */,
 				FAACEF221E4AAA7E002202B4 /* LaunchScreen.storyboard */,
 				FAACEF251E4AAA7E002202B4 /* Info.plist */,
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAACEF191E4AAA7E002202B4 /* ViewController.swift in Sources */,
+				FA99BE971E4BFB5300D9B53A /* GameCell.swift in Sources */,
+				FA99BE951E4BFA0300D9B53A /* AddGameViewController.swift in Sources */,
 				FAACEF1F1E4AAA7E002202B4 /* queRule.xcdatamodeld in Sources */,
+				FA99BE931E4BF6E300D9B53A /* GamesViewController.swift in Sources */,
 				FAACEF171E4AAA7E002202B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +309,7 @@
 				FAACEF2A1E4AAA7E002202B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

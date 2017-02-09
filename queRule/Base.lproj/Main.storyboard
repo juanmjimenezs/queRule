@@ -13,7 +13,7 @@
         <!--Mis Juegos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="queRule" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GamesViewController" customModule="queRule" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -131,7 +131,7 @@
         <scene sceneID="zBZ-CP-g1B">
             <objects>
                 <navigationController id="23s-lW-MtL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wyW-UC-fna">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wyW-UC-fna">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,7 +150,7 @@
         <!--Añadir Videojuego-->
         <scene sceneID="fAs-BL-PEC">
             <objects>
-                <viewController title="Añadir Videojuego" id="d1H-st-qId" sceneMemberID="viewController">
+                <viewController title="Añadir Videojuego" id="d1H-st-qId" customClass="AddGameViewController" customModule="queRule" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xAT-zL-jtT"/>
                         <viewControllerLayoutGuide type="bottom" id="t0w-px-0fU"/>
@@ -282,7 +282,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wMV-sD-W61" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="w2J-A9-vPk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w2J-A9-vPk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
@@ -304,6 +304,6 @@
         <image name="img_game_cover" width="320" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0DI-p9-Egu"/>
+        <segue reference="Gg9-jR-vUj"/>
     </inferredMetricsTieBreakers>
 </document>
