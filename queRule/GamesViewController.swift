@@ -37,6 +37,25 @@ class GamesViewController: UIViewController {
         self.performGamesQuery()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addGameSegue" {
+            let addNavVC = segue.destination as! UINavigationController
+            let addVC = addNavVC.topViewController as! AddGameViewController
+            addVC.managedObjectContext = self.managedObjectContext
+            addVC.delegate = self
+        }
+        
+        if segue.identifier == "editGameSegue" {
+            let addVC = segue.destination as! AddGameViewController
+            addVC.managedObjectContext = self.managedObjectContext
+            addVC.delegate = self
+            
+            let selectedIndex = collectionView.indexPathsForSelectedItems?.first?.row
+            let game = self.lstGames[selectedIndex!]
+            addVC.game = game
+        }
+    }
+    
     /**
      Al string pasado por parametro le damos color negro hasta los (:) y al resto le aplicamos el color pasado por parametro
      
@@ -88,6 +107,12 @@ class GamesViewController: UIViewController {
         if offsetY < -120 {
             performSegue(withIdentifier: "addGameSegue", sender: self)
         }
+    }
+}
+
+extension GamesViewController: AddGameViewControllerDelegate {
+    func didAddGame() {
+        self.collectionView.reloadData()
     }
 }
 
@@ -151,9 +176,9 @@ extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return CGSize(width: self.view.frame.size.width - 20, height: 120.0)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    /*func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "editGameSegue", sender: self)
-    }
+    }*/
 }
 
 extension String {

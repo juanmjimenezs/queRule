@@ -141,9 +141,10 @@
         <scene sceneID="zBZ-CP-g1B">
             <objects>
                 <navigationController id="23s-lW-MtL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wyW-UC-fna">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wyW-UC-fna">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,6 +186,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNy-iM-zhK">
                                 <rect key="frame" x="172" y="427" width="51" height="31"/>
                                 <color key="onTintColor" red="0.8784313725490196" green="0.21176470588235294" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="d1H-st-qId" eventType="valueChanged" id="219-D8-mOH"/>
+                                </connections>
                             </switch>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ShO-0r-Pwh">
                                 <rect key="frame" x="27" y="466" width="320" height="110"/>
@@ -265,6 +269,9 @@
                                     <constraint firstAttribute="height" constant="34" id="uz1-nY-xvw"/>
                                 </constraints>
                                 <state key="normal" title="Eliminar videojuego"/>
+                                <connections>
+                                    <action selector="deletePressed:" destination="d1H-st-qId" eventType="touchUpInside" id="GNG-fz-2sY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -282,7 +289,17 @@
                             <constraint firstAttribute="trailing" secondItem="ShO-0r-Pwh" secondAttribute="trailing" constant="28" id="yZf-ct-aJs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5q4-cG-sZW"/>
+                    <navigationItem key="navigationItem" id="5q4-cG-sZW">
+                        <barButtonItem key="backBarButtonItem" title=" " id="4tk-7L-uLu"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="borrowedSwitch" destination="QNy-iM-zhK" id="evb-Cw-G0O"/>
+                        <outlet property="btnDelete" destination="9pF-jC-r2b" id="nok-iG-uH6"/>
+                        <outlet property="gameImageView" destination="VQx-6K-hfL" id="1aE-f4-yIr"/>
+                        <outlet property="txtBorrowedDate" destination="raU-9R-RPp" id="y6n-y7-oyE"/>
+                        <outlet property="txtBorrowedTo" destination="5RI-Cj-idF" id="o0x-YH-Ffr"/>
+                        <outlet property="txtTitle" destination="5Gh-jf-Fdk" id="Pc2-M6-Prd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgd-ge-Xrp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,9 +310,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wMV-sD-W61" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w2J-A9-vPk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="w2J-A9-vPk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
